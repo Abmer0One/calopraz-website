@@ -1,0 +1,453 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #ffffff;
+  --foreground: #2c2c2c;
+  --card: #ffffff;
+  --card-foreground: #2c2c2c;
+  --popover: #ffffff;
+  --popover-foreground: #2c2c2c;
+  --primary: #D4A017;
+  --primary-foreground: #ffffff;
+  --secondary: #6b7280;
+  --secondary-foreground: #ffffff;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --accent: #B8860B;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #D4A017;
+  --chart-1: #D4A017;
+  --chart-2: #B8860B;
+  --chart-3: #6b7280;
+  --chart-4: #9ca3af;
+  --chart-5: #d1d5db;
+  --sidebar: #f9fafb;
+  --sidebar-foreground: #2c2c2c;
+  --sidebar-primary: #D4A017;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f3f4f6;
+  --sidebar-accent-foreground: #2c2c2c;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #D4A017;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+/* CALOPRAZ Custom Styles */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+.calopraz-gold {
+  color: #D4A017;
+}
+
+.calopraz-gold-dark {
+  color: #B8860B;
+}
+
+.calopraz-bg-gold {
+  background-color: #D4A017;
+}
+
+.calopraz-bg-gold-dark {
+  background-color: #B8860B;
+}
+
+.calopraz-gradient {
+  background: linear-gradient(135deg, #D4A017 0%, #B8860B 100%);
+}
+
+.calopraz-hero {
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.1) 0%, rgba(184, 134, 11, 0.1) 100%);
+}
+
+.calopraz-card {
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.calopraz-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(212, 160, 23, 0.15);
+  border-color: #D4A017;
+}
+
+.calopraz-btn-primary {
+  background: linear-gradient(135deg, #D4A017 0%, #B8860B 100%);
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.calopraz-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 160, 23, 0.3);
+}
+
+.calopraz-section {
+  padding: 5rem 0;
+}
+
+.calopraz-text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calopraz-animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.calopraz-animate-slide-in {
+  animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .calopraz-section {
+    padding: 3rem 0;
+  }
+}
+
+
+/* Additional Animations */
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.calopraz-animate-bounce {
+  animation: bounce 1s ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.calopraz-animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Performance optimizations */
+.calopraz-card {
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.calopraz-btn-primary {
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
+}
+
+/* Loading states */
+.calopraz-loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.calopraz-loading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 160, 23, 0.2), transparent);
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Focus states for accessibility */
+.calopraz-btn-primary:focus,
+button:focus,
+a:focus {
+  outline: 2px solid #D4A017;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .calopraz-section {
+    padding: 2rem 0;
+  }
+  
+  .calopraz-card {
+    break-inside: avoid;
+  }
+  
+  nav,
+  footer {
+    display: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .calopraz-gold {
+    color: #B8860B;
+  }
+  
+  .calopraz-card {
+    border-width: 2px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .calopraz-animate-fade-in,
+  .calopraz-animate-slide-in,
+  .animate-slide-up,
+  .animate-slide-down,
+  .calopraz-animate-bounce,
+  .calopraz-animate-pulse {
+    animation: none;
+  }
+  
+  .calopraz-card:hover {
+    transform: none;
+  }
+  
+  .calopraz-btn-primary:hover {
+    transform: none;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  .dark-mode {
+    --background: #1a1a1a;
+    --foreground: #ffffff;
+    --card: #2a2a2a;
+    --card-foreground: #ffffff;
+  }
+}
+
+/* Enhanced mobile styles */
+@media (max-width: 640px) {
+  .calopraz-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .calopraz-hero p {
+    font-size: 1.125rem;
+  }
+  
+  .calopraz-card {
+    margin-bottom: 1rem;
+  }
+  
+  .calopraz-section {
+    padding: 2rem 0;
+  }
+}
+
+/* Enhanced tablet styles */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .calopraz-section {
+    padding: 4rem 0;
+  }
+}
+
+/* Large screen optimizations */
+@media (min-width: 1440px) {
+  .max-w-7xl {
+    max-width: 1400px;
+  }
+}
+
+/* Utility classes */
+.calopraz-text-gradient {
+  background: linear-gradient(135deg, #D4A017 0%, #B8860B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.calopraz-border-gradient {
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, #D4A017, #B8860B) border-box;
+}
+
+.calopraz-shadow-gold {
+  box-shadow: 0 4px 20px rgba(212, 160, 23, 0.15);
+}
+
+.calopraz-shadow-gold-lg {
+  box-shadow: 0 10px 40px rgba(212, 160, 23, 0.2);
+}
+
